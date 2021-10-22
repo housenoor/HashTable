@@ -17,6 +17,7 @@ public class MyMapNode<K, V> {
 
 	public void setKey(K key) {
 		this.key = key;
+
 	}
 
 	public V getValue() {
@@ -32,13 +33,13 @@ public class MyMapNode<K, V> {
 	}
 
 	public void setNext(MyMapNode<K, V> next) {
-		this.next = next;
+		this.next = (MyMapNode<K, V>) next;
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder nodeString = new StringBuilder();
-		nodeString.append("Node{" + "Key=").append(key).append(" Value=").append(value).append("}");
+		nodeString.append("MyMapNode{" + " Key= ").append(key).append(" Value= ").append(value).append('}');
 		if (next != null)
 			nodeString.append("->").append(next);
 		return nodeString.toString();
